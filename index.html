@@ -3,52 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malavika Sanjeev - Profile</title>
+    <title>Profile | Malavika Sanjeev</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Minimalist and professional styling */
+        /* Base Styling */
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f0f5 0%, #e0e0e8 100%); /* Light gradient background */
             margin: 0;
-            padding: 50px 20px;
+            padding: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
+
+        /* Container Card */
         .profile-card {
             background-color: #ffffff;
-            padding: 40px;
-            border-radius: 6px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft, pronounced shadow */
+            padding: 30px 40px;
             max-width: 450px;
-            width: 100%;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px); /* Slight lift on hover */
+        }
+
+        /* Header and Title */
+        .profile-card h1 {
+            color: #4a90e2; /* A nice, clean blue */
+            font-size: 2.2em;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .profile-card h2 {
+            color: #6a6a6a;
+            font-size: 1em;
+            margin-top: 0;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        /* Information List */
+        .info-list {
+            list-style: none;
+            padding: 0;
             text-align: left;
+            margin-top: 20px;
         }
-        h1 {
-            font-size: 28px;
-            font-weight: 500;
-            color: #111;
-            margin-bottom: 25px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 15px;
-        }
-        .detail-item {
+
+        .info-list li {
+            font-size: 1.1em;
+            padding: 12px 0;
+            border-bottom: 1px dashed #f0f0f0;
             display: flex;
-            margin-bottom: 15px;
             align-items: center;
         }
-        .label {
-            font-weight: 400;
-            color: #666;
-            width: 120px; /* Fixed width for alignment */
-            flex-shrink: 0;
-            padding-right: 15px;
+
+        .info-list li:last-child {
+            border-bottom: none;
         }
-        .value {
-            font-weight: 500;
-            color: #333;
+
+        /* Key Highlights */
+        .key-data {
+            font-weight: 600;
+            color: #3cb371; /* A fresh green for emphasis */
+            margin-left: 10px;
+        }
+
+        /* Icons (using simple text characters here, but could be replaced with Font Awesome) */
+        .icon {
+            color: #4a90e2;
+            margin-right: 15px;
+            font-size: 1.2em;
         }
     </style>
 </head>
@@ -56,16 +88,19 @@
 
     <div class="profile-card">
         <h1>Malavika Sanjeev</h1>
+        <h2>Student Profile</h2>
+        
+        <ul class="info-list">
+            <li>
+                <span class="icon">📍</span>
+                Place: <span class="key-data">Thrissur, Kerala</span>
+            </li>
+            <li>
+                <span class="icon">📚</span>
+                Status: <span class="key-data">Diploma Student</span>
+            </li>
+        </ul>
 
-        <div class="detail-item">
-            <span class="label">Location</span>
-            <span class="value">Thrissur, Kerala, India</span>
-        </div>
-
-        <div class="detail-item">
-            <span class="label">Current Status</span>
-            <span class="value">Diploma Student</span>
-        </div>
     </div>
 
 </body>
